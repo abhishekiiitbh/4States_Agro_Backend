@@ -1,0 +1,30 @@
+functions that we need for our website
+1. farmer registation
+2. bidder registation
+3. login {Email,Password}
+4. contactUs {Name,Email,Message}
+
+After Admin logs in ,
+	5.ShowMessages
+	6.ApproveSellRequest
+	7.UpdateOrFinalizeBiddingStatus
+	8.InsuranceApplicationRequest
+	9.ApproveClaimInsaurance
+
+After Farmer logs in ,	
+    for bidding section,
+	10.PlaceSellRequest
+	11.ViewSoldCropHistory
+	12.ViewMarketPlace
+
+    for insaurance section,
+	13.ApplyInsaurance
+	14.ClaimInsaurance
+	15.ShowPreviousInsaurance
+
+After Bidder logs in ,
+	16.BiddingOnProduct
+	17.AllPreviousBidsOfBidder
+
+
+
