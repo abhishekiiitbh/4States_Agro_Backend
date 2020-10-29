@@ -19,9 +19,27 @@ public class Farmer {
 	@SequenceGenerator(name="farmSeq", initialValue=1001, allocationSize=1)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="farmSeq")
 	int fId;// pk
+	
+	String name;
+	String email;
+	String PhoneNo;
+	String bankAccount;
+	String bankName;
+	String ifscCode;
+	String address;
+	String city;
+	String state;
+	String pincode;
+	String aadhaarCardNumber;
+	String panCardNumber;
+	String password;
+	//boolean
+	/* upload-Aadhaar card, pan card,certificate */
+	
+	
 	int area;// hectares
 	String landAddress;
-	String state;
+	String landstate;
 	int landPincode;
 	String certificateNumber;
 	
@@ -37,6 +55,96 @@ public class Farmer {
 	
 	
 	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPhoneNo() {
+		return PhoneNo;
+	}
+	public void setPhoneNo(String phoneNo) {
+		PhoneNo = phoneNo;
+	}
+	public String getBankAccount() {
+		return bankAccount;
+	}
+	public void setBankAccount(String bankAccount) {
+		this.bankAccount = bankAccount;
+	}
+	public String getBankName() {
+		return bankName;
+	}
+	public void setBankName(String bankName) {
+		this.bankName = bankName;
+	}
+	public String getIfscCode() {
+		return ifscCode;
+	}
+	public void setIfscCode(String ifscCode) {
+		this.ifscCode = ifscCode;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public String getPincode() {
+		return pincode;
+	}
+	public void setPincode(String pincode) {
+		this.pincode = pincode;
+	}
+	public String getAadhaarCardNumber() {
+		return aadhaarCardNumber;
+	}
+	public void setAadhaarCardNumber(String aadhaarCardNumber) {
+		this.aadhaarCardNumber = aadhaarCardNumber;
+	}
+	public String getPanCardNumber() {
+		return panCardNumber;
+	}
+	public void setPanCardNumber(String panCardNumber) {
+		this.panCardNumber = panCardNumber;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getLandstate() {
+		return landstate;
+	}
+	public void setLandstate(String landstate) {
+		this.landstate = landstate;
+	}
+	public InsuranceApplications getInsuranceapplication() {
+		return insuranceapplication;
+	}
+	public void setInsuranceapplication(InsuranceApplications insuranceapplication) {
+		this.insuranceapplication = insuranceapplication;
+	}
 	public List<Sales> getSales() {
 		return sales;
 	}
@@ -61,12 +169,7 @@ public class Farmer {
 	public void setLandAddress(String landAddress) {
 		this.landAddress = landAddress;
 	}
-	public String getState() {
-		return state;
-	}
-	public void setState(String state) {
-		this.state = state;
-	}
+	
 	public int getLandPincode() {
 		return landPincode;
 	}
