@@ -1,5 +1,6 @@
 package com.lti.agro_backend;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,9 +10,11 @@ import javax.persistence.SequenceGenerator;
 @Entity
 public class ContactUsRequest {
 	
-	@Id
+	
 	@SequenceGenerator(name="cntSeq", initialValue=5001, allocationSize=1)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="cntSeq")
+	@Id
+	//@Column(name="contact_id")
 	int cId;
 	String name;
 	String email;

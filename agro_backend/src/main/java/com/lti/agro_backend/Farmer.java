@@ -12,7 +12,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
 @Entity
-public class Farmer extends User {
+public class Farmer {
+//public class Farmer extends User {
 	
 	@Id
 	@SequenceGenerator(name="farmSeq", initialValue=1001, allocationSize=1)
@@ -24,12 +25,15 @@ public class Farmer extends User {
 	int landPincode;
 	String certificateNumber;
 	
+	
+	
 	@OneToMany(mappedBy="farmer",cascade=CascadeType.ALL)
 	List<Sales> sales;
 	
 	@OneToOne(mappedBy="farmer",cascade=CascadeType.ALL)
 	InsuranceApplications insuranceapplication;
-
+	
+	
 	
 	
 	

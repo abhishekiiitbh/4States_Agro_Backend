@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
@@ -23,12 +24,24 @@ public class InsuranceApplications {
 	double sumAssured;
 	double farmersPrimium;
 	double govtsPrimium;
+	@Id
+	@SequenceGenerator(name="insappSeq", initialValue=9001, allocationSize=1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="insappSeq")
 	int policyNo;
 	boolean status;
 	
 	@OneToOne
 	@JoinColumn(name="fId")
 	Farmer farmer;
+	
+	@ManyToOne
+	@JoinColumn(name="companyId")
+	InsuranceCompanies insurancecompany;
+	
+	@OneToOne(mappedBy="insuranceapplication",cascade=CascadeType.ALL)
+	InsuranceClaim insuranceclaim;
+	
+	
 
 
 	public String getName() {

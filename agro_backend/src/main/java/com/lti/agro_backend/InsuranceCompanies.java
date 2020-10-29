@@ -1,9 +1,15 @@
 package com.lti.agro_backend;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
 @Entity
@@ -14,12 +20,24 @@ public class InsuranceCompanies {
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="insSeq")
 	int companyId;
 	
+	@OneToMany(mappedBy="insurancecompany",cascade=CascadeType.ALL)
+	List<InsuranceApplications> insuranceapplications;
+	
 	
 	String companyName;
 	double sumAssuredPrHectare;
 	double interest;
 	String cropType;
 	String state;
+	
+	
+	
+	public List<InsuranceApplications> getInsuranceapplications() {
+		return insuranceapplications;
+	}
+	public void setInsuranceapplications(List<InsuranceApplications> insuranceapplications) {
+		this.insuranceapplications = insuranceapplications;
+	}
 	public int getCompanyId() {
 		return companyId;
 	}

@@ -12,7 +12,8 @@ import javax.persistence.SequenceGenerator;
 
 
 @Entity
-public class Bidder  extends User {
+public class Bidder {
+//public class Bidder  extends User {
 	
 	@Id
 	@SequenceGenerator(name="bidderSeq", initialValue=2001, allocationSize=1)

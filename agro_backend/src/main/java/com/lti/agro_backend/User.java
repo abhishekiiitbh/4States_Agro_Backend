@@ -1,6 +1,7 @@
 package com.lti.agro_backend;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
@@ -20,9 +21,11 @@ public class User {
 	String city;
 	String state;
 	String pincode;
+	@Id
 	String aadhaarCardNumber;
 	String panCardNumber;
 	String password;
+	//boolean
 	/* upload-Aadhaar card, pan card,certificate */
 	public String getName() {
 		return name;
