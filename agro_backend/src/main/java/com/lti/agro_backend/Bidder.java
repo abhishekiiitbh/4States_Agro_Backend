@@ -33,7 +33,7 @@ public class Bidder {
 	String aadhaarCardNumber;
 	String panCardNumber;
 	String password;
-	//boolean
+	String approval;// "YES" OR "NO"
 	/* upload-Aadhaar card, pan card,certificate */
 	
 	String traderLicenseNumber;
@@ -139,6 +139,13 @@ public class Bidder {
 	public void setTraderLicenseNumber(String traderLicenseNumber) {
 		this.traderLicenseNumber = traderLicenseNumber;
 	}
+	public String getApproval() {
+		return approval;
+	}
+	public void setApproval(String approval) {
+		this.approval = approval;
+	}
+	
 	
 	
 }

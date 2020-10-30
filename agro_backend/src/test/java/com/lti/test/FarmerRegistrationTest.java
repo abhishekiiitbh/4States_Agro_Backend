@@ -13,12 +13,12 @@ public class FarmerRegistrationTest {
 	@Test
 	public void registerAFarmer() {
 		Farmer farmer=new Farmer();
-		farmer.setName("Veeru");
-		farmer.setEmail("veeru@lti.com");
+		farmer.setName("Rahul");
+		farmer.setEmail("rahul@lti.com");
 		farmer.setAadhaarCardNumber("234454234234");
 		farmer.setAddress("421 road");
 		farmer.setArea(23224);
-		farmer.setCity("mohali");
+		farmer.setCity("chilika");
 		farmer.setBankAccount("23423093242");
 		farmer.setBankName("Axis");
 		farmer.setCertificateNumber("nkj234523");
@@ -27,8 +27,9 @@ public class FarmerRegistrationTest {
 		farmer.setPanCardNumber("JJKS3423223");
 		farmer.setPassword("gos@178");
 		farmer.setLandAddress("balisahi , kaithakhola , chandigarh");
-		farmer.setLandstate("Punjab");
+		farmer.setLandstate("Odisha");
 		farmer.setLandPincode(756171);
+		farmer.setApproval("NO");
 		dao.registerAFarmer(farmer);
 		
 	}

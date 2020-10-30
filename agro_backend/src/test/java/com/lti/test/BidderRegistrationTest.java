@@ -28,6 +28,7 @@ public class BidderRegistrationTest {
 		bidder.setPassword("manav@178");
 		bidder.setPincode("234523");
 		bidder.setState("Maharastra");
+		bidder.setApproval("NO");
 		dao.registerABidder(bidder);
 	}
 

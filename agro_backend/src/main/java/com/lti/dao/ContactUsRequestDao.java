@@ -28,5 +28,7 @@ public class ContactUsRequestDao {
 		System.out.println("Message added.");
 
 	}
+	
+	
 }
 

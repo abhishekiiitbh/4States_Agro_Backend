@@ -10,8 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="tbl_farmer")
 public class Farmer {
 //public class Farmer extends User {
 	
@@ -33,7 +35,8 @@ public class Farmer {
 	String aadhaarCardNumber;
 	String panCardNumber;
 	String password;
-	//boolean
+	String approval;// "YES" OR "NO"
+	
 	/* upload-Aadhaar card, pan card,certificate */
 	
 	
@@ -181,6 +184,12 @@ public class Farmer {
 	}
 	public void setCertificateNumber(String certificateNumber) {
 		this.certificateNumber = certificateNumber;
+	}
+	public String getApproval() {
+		return approval;
+	}
+	public void setApproval(String approval) {
+		this.approval = approval;
 	}
 	
 	
