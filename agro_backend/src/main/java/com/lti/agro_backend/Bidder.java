@@ -16,8 +16,8 @@ public class Bidder {
 //public class Bidder  extends User {
 	
 	@Id
-	@SequenceGenerator(name="bidderSeq", initialValue=2001, allocationSize=1)
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="bidderSeq")
+	@SequenceGenerator(name="bidSeq", initialValue=2001, allocationSize=1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="bidSeq")
 	int bId;//pk
 	
 	String name;

@@ -14,9 +14,9 @@ public class ContactUsRequestTests{
 	@Test
 	public void addAMessage() {
 		ContactUsRequest cntusreq=new ContactUsRequest();
-		cntusreq.setName("Vignaeshaaaaa");
-		cntusreq.setEmail("vig@iiit-bh.ac.in");
-		cntusreq.setMessage("Hello people");
+		cntusreq.setName("Vikas");
+		cntusreq.setEmail("vikas@iiit-bh.ac.in");
+		cntusreq.setMessage("Hello gurujanos");
 		cntusreq.setStatus(false);
 		dao.addAMessage(cntusreq);
 		
