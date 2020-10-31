@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,7 +14,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tbl_farmer")
+@Table(name="agro_farmer")
 public class Farmer {
 //public class Farmer extends User {
 	
@@ -190,6 +191,15 @@ public class Farmer {
 	}
 	public void setApproval(String approval) {
 		this.approval = approval;
+	}
+	@Override
+	public String toString() {
+		return "Farmer [fId=" + fId + ", name=" + name + ", email=" + email + ", PhoneNo=" + PhoneNo + ", bankAccount="
+				+ bankAccount + ", bankName=" + bankName + ", ifscCode=" + ifscCode + ", address=" + address + ", city="
+				+ city + ", state=" + state + ", pincode=" + pincode + ", aadhaarCardNumber=" + aadhaarCardNumber
+				+ ", panCardNumber=" + panCardNumber + ", password=" + password + ", approval=" + approval + ", area="
+				+ area + ", landAddress=" + landAddress + ", landstate=" + landstate + ", landPincode=" + landPincode
+				+ ", certificateNumber=" + certificateNumber  + "]";
 	}
 	
 	

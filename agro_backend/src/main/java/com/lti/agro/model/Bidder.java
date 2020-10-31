@@ -9,9 +9,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 
 @Entity
+@Table(name = "agro_bidder")
 public class Bidder {
 //public class Bidder  extends User {
 	
@@ -144,6 +146,14 @@ public class Bidder {
 	}
 	public void setApproval(String approval) {
 		this.approval = approval;
+	}
+	@Override
+	public String toString() {
+		return "Bidder [bId=" + bId + ", name=" + name + ", email=" + email + ", PhoneNo=" + PhoneNo + ", bankAccount="
+				+ bankAccount + ", bankName=" + bankName + ", ifscCode=" + ifscCode + ", address=" + address + ", city="
+				+ city + ", state=" + state + ", pincode=" + pincode + ", aadhaarCardNumber=" + aadhaarCardNumber
+				+ ", panCardNumber=" + panCardNumber + ", password=" + password + ", approval=" + approval
+				+ ", traderLicenseNumber=" + traderLicenseNumber + "]";
 	}
 	
 	

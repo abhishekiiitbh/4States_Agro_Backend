@@ -9,8 +9,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "agro_insuranceapplication")
 public class InsuranceApplications {
 	
 	
@@ -28,6 +30,7 @@ public class InsuranceApplications {
 	@SequenceGenerator(name="insappSeq", initialValue=9001, allocationSize=1)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="insappSeq")
 	int policyNo;
+	
 	boolean status;
 	
 	@OneToOne
@@ -146,6 +149,15 @@ public class InsuranceApplications {
 
 	public void setFarmer(Farmer farmer) {
 		this.farmer = farmer;
+	}
+
+	@Override
+	public String toString() {
+		return "InsuranceApplications [name=" + name + ", email=" + email + ", address=" + address + ", cropName="
+				+ cropName + ", cropType=" + cropType + ", cultivationArea=" + cultivationArea + ", year=" + year
+				+ ", sumAssured=" + sumAssured + ", farmersPrimium=" + farmersPrimium + ", govtsPrimium=" + govtsPrimium
+				+ ", policyNo=" + policyNo + ", status=" + status + ", farmer=" + farmer + ", insurancecompany="
+				+ insurancecompany + ", insuranceclaim=" + insuranceclaim + "]";
 	}
 	
 	
