@@ -4,8 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.lti.agro_backend.Bidder;
-import com.lti.dao.BidderRegistrationDao;
+import com.lti.agro.model.Bidder;
+import com.lti.agro.repo.BidderRegistrationDao;
 
 public class BidderRegistrationTest {
 	
@@ -14,8 +14,8 @@ public class BidderRegistrationTest {
 	@Test
 	public void registerABidder() {
 		Bidder bidder=new Bidder();
-		bidder.setName("Vikas");
-		bidder.setEmail("human@lti.com");
+		bidder.setName("SHWETA");
+		bidder.setEmail("human1@lti.com");
 		bidder.setAadhaarCardNumber("234234234234");
 		bidder.setAddress("420 road");
 		bidder.setCity("mumbai");
@@ -28,7 +28,7 @@ public class BidderRegistrationTest {
 		bidder.setPassword("manav@178");
 		bidder.setPincode("234523");
 		bidder.setState("Maharastra");
-		bidder.setApproval("NO");
+		bidder.setApproval("YES");
 		dao.registerABidder(bidder);
 	}
 

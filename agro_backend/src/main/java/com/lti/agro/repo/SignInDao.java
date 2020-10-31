@@ -1,4 +1,4 @@
-package com.lti.dao;
+package com.lti.agro.repo;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -6,8 +6,8 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
-import com.lti.agro_backend.Bidder;
-import com.lti.agro_backend.Farmer;
+import com.lti.agro.model.Bidder;
+import com.lti.agro.model.Farmer;
 
 public class SignInDao {
 	EntityManagerFactory emf;
@@ -24,20 +24,20 @@ public class SignInDao {
 	public boolean signIn(String email,String password,String userType){
 		
 		if(userType=="Admin"){// here we will add login credentails of admin
-			// we will have 4 admins(4 team members)
+			if(email=="Abhishek.Pandit@lntinfotech.com" && password=="Agro@2020")
+				return true;
 			
 		}else if(userType=="Bidder"){
 			
 			String jpql="select b from Bidder b where b.email=:eml and b.password=:pwd";
-			//String approvalStatus="select b from Bidder  "
-			// approval part is missing
 			// here we will check approval if it is "Yes" then check login credentails
+			
 			Query query=em.createQuery(jpql,Bidder.class);
 			query.setParameter("eml", email);
 			query.setParameter("pwd", password);
 			
 			Bidder acc=(Bidder)query.getResultList().stream().findFirst().orElse(null);
-	        if(acc!=null)
+	        if(acc!=null && acc.getApproval().compareTo("YES")==0)
 	            return true;
 			
 			

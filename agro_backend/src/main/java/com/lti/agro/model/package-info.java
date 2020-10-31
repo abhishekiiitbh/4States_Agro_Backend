@@ -5,4 +5,4 @@
  * @author user
  *
  */
-package com.lti.agro_backend;
+package com.lti.agro.model;

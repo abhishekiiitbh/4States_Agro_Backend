@@ -1,4 +1,4 @@
-package com.lti.dao;
+package com.lti.agro.repo;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
-import com.lti.agro_backend.ContactUsRequest;
+import com.lti.agro.model.ContactUsRequest;
 
 public class ViewMessagesDao {
 	EntityManagerFactory emf;

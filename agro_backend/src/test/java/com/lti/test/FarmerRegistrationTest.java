@@ -4,8 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.lti.agro_backend.Farmer;
-import com.lti.dao.FarmerRegistrationDao;
+import com.lti.agro.model.Farmer;
+import com.lti.agro.repo.FarmerRegistrationDao;
 
 public class FarmerRegistrationTest {
 	

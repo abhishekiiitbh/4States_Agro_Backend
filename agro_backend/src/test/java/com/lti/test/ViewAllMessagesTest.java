@@ -7,8 +7,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.lti.agro_backend.ContactUsRequest;
-import com.lti.dao.ViewMessagesDao;
+import com.lti.agro.model.ContactUsRequest;
+import com.lti.agro.repo.ViewMessagesDao;
 
 public class ViewAllMessagesTest {
 	

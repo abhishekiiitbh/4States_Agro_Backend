@@ -1,15 +1,24 @@
-package com.lti.agro_backend;
+package com.lti.agro.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+
 
 @Entity
-@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
-public class User {
+public class Bidder {
+//public class Bidder  extends User {
 	
-	
+	@Id
+	@SequenceGenerator(name="bidSeq", initialValue=2001, allocationSize=1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="bidSeq")
+	int bId;//pk
 	
 	String name;
 	String email;
@@ -21,12 +30,19 @@ public class User {
 	String city;
 	String state;
 	String pincode;
-	@Id
 	String aadhaarCardNumber;
 	String panCardNumber;
 	String password;
-	//boolean
+	String approval;// "YES" OR "NO"
 	/* upload-Aadhaar card, pan card,certificate */
+	
+	String traderLicenseNumber;
+	
+	@OneToMany(mappedBy="bidder",cascade=CascadeType.ALL)
+	List<Sales> sales;
+	
+	
+	
 	public String getName() {
 		return name;
 	}
@@ -105,7 +121,30 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+	public List<Sales> getSales() {
+		return sales;
+	}
+	public void setSales(List<Sales> sales) {
+		this.sales = sales;
+	}
+	public int getbId() {
+		return bId;
+	}
+	public void setbId(int bId) {
+		this.bId = bId;
+	}
+	public String getTraderLicenseNumber() {
+		return traderLicenseNumber;
+	}
+	public void setTraderLicenseNumber(String traderLicenseNumber) {
+		this.traderLicenseNumber = traderLicenseNumber;
+	}
+	public String getApproval() {
+		return approval;
+	}
+	public void setApproval(String approval) {
+		this.approval = approval;
+	}
 	
 	
 	

@@ -4,8 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.lti.agro_backend.ContactUsRequest;
-import com.lti.dao.ContactUsRequestDao;
+import com.lti.agro.model.ContactUsRequest;
+import com.lti.agro.repo.ContactUsRequestDao;
 
 public class ContactUsRequestTests{
 	

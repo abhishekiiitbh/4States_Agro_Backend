@@ -1,12 +1,12 @@
 
-package com.lti.dao;
+package com.lti.agro.repo;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import com.lti.agro_backend.ContactUsRequest;
+import com.lti.agro.model.ContactUsRequest;
 
 public class ContactUsRequestDao {
 
