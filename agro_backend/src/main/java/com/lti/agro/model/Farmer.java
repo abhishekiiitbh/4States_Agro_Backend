@@ -49,7 +49,8 @@ public class Farmer {
 	
 	
 	
-	@OneToMany(mappedBy="farmer",cascade=CascadeType.ALL)
+	
+	 @OneToMany(mappedBy="farmer",cascade=CascadeType.ALL)
 	List<Sales> sales;
 	
 	@OneToOne(mappedBy="farmer",cascade=CascadeType.ALL)

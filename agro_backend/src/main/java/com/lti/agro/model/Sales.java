@@ -46,7 +46,7 @@ public class Sales {
 		return "Sales [salesId=" + salesId + ", cropName=" + cropName + ", cropType=" + cropType + ", quantity="
 				+ quantity + ", soilPhCertificate=" + soilPhCertificate + ", fertilizer=" + fertilizer + ", status="
 				+ status + ", sold=" + sold + ", basePrice=" + basePrice + ", biddingAmount=" + biddingAmount
-				+ ", saledate=" + saledate + ", farmer=" + farmer + ", bidder=" + bidder + "]";
+				+ ", saledate=" + saledate + "]";
 	}
 	public LocalDate getSaledate() {
 		return saledate;
