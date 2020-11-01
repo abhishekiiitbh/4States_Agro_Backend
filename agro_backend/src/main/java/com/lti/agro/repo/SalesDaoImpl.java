@@ -24,9 +24,10 @@ public class SalesDaoImpl {
 		System.out.println(newSale.getSalesId());
 	}
 	
-	public void findSalesById(int sId) {
+	public Sales findSalesById(int sId) {
 		Sales foundSale = em.find(Sales.class, sId);
-		System.out.println(foundSale);
+		return foundSale;
+		//System.out.println(foundSale);
 	}
 	
 	public void viewAllSales() {

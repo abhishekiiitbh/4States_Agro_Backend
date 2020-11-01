@@ -26,13 +26,13 @@ public class SalesRegister {
 		Sales sale = new Sales();
 		sale.setBasePrice(500d);
 		sale.setBidder(null);
-		sale.setBiddingAmount(800d);
-		sale.setCropName("Wheat");	
+		sale.setBiddingAmount(1000.00);
+		sale.setCropName("Paddy");	
 		sale.setCropType("Khariff");
-		sale.setDate(LocalDate.of(2020, 10, 10));
+		sale.setDate(LocalDate.of(2020, 30, 10));
 		sale.setFarmer(null);
 		sale.setFertilizer("ABC");
-		sale.setQuantity(40);
+		sale.setQuantity(70);
 		sale.setSoilPhCertificate(false);
 		sale.setSold(false);
 		sale.setStatus(false);

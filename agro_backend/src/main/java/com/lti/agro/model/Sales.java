@@ -108,7 +108,7 @@ public class Sales {
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
-	public boolean isSold() {
+	public boolean getSold() {
 		return sold;
 	}
 	public void setSold(boolean sold) {

@@ -49,7 +49,7 @@ public class BiddingDaoImpl implements BiddingDao {
 	@Transactional
 	public void placeBid(int salesId, double biddingAmount) {
 		Sales sales=em.find(Sales.class, salesId);
-        if(!sales.isSold() && biddingAmount>sales.getBiddingAmount()) {
+        if(!sales.getSold() && biddingAmount>sales.getBiddingAmount()) {
         	
 			Query query= em.createQuery("update Sales s set s.biddingAmount = :bidAmt" + " where s.salesId = :sId");
 			query.setParameter("bidAmt", biddingAmount);
@@ -62,36 +62,16 @@ public class BiddingDaoImpl implements BiddingDao {
         	System.out.println("You are not allowed to Bid!!Your bid value is less than BasePrice");
         }
 	}
-	//After Completing placeSellRequest ,we need to add this updated code..Since there is BidderId
-	/*
-	 @Transactional
-	public void placeBid(int bId,int sId, double biddingAmount) {
-		Sales sales=em.find(Sales.class, sId);
-        if(!sales.getSold() && biddingAmount>sales.getBiddingAmount()) {
-        	
-			Query query= em.createQuery("update Sales s set s.biddingAmount = :bidAmt" + " where s.sId = :salesId AND s.bId= : bidderId");
-			query.setParameter("bidAmt", biddingAmount);
-			query.setParameter("salesId", sId);
-			query.setParameter("bidderId", bId);
-		    query.executeUpdate();
-			int result = query.executeUpdate();
-			System.out.println("You made the bid Sucessfully!!Please wait for Approval!!");
-        }
-        else {
-        	System.out.println("You are not allowed to Bid!!Your bid value is less than BasePrice");
-        }
-	}
-	 
-    */
 	
 	
 	@Transactional
 	public List<Sales> viewAllBidsOfBidder(int bId) {
-		String jpql="select s.biddingAmount from Sales s WHERE s.bId= : bidderId";
-		TypedQuery<Sales> query=em.createQuery(jpql, Sales.class);
+		String jpql="Select s from Sales s where s.bId=:bidderId";
+		TypedQuery<Sales> query = em.createQuery(jpql, Sales.class);
 		query.setParameter("bidderId", bId);
-		query.executeUpdate();
+		int result=query.executeUpdate();
 		return query.getResultList();
+		
 
 	}
 
