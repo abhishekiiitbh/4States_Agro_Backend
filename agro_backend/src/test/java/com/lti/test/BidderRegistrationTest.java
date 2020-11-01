@@ -18,20 +18,20 @@ public class BidderRegistrationTest {
 	@Test
 	public void registerABidder() {
 		Bidder bidder=new Bidder();
-		bidder.setName("Sanya");
-		bidder.setEmail("human@lti.com");
+		bidder.setName("Guna");
+		bidder.setEmail("guna@lti.com");
 		bidder.setAadhaarCardNumber("234234234234");
 		bidder.setAddress("420 road");
-		bidder.setCity("mumbai");
+		bidder.setCity("TAMBARAM");
 		bidder.setBankAccount("234212393242");
-		bidder.setBankName("HDFC");
+		bidder.setBankName("ICICI");
 		bidder.setTraderLicenseNumber("trd234231");
 		bidder.setIfscCode("UTB1731000");
 		bidder.setPhoneNo("9663439275");
 		bidder.setPanCardNumber("ABCD423223");
-		bidder.setPassword("Sanya@123");
+		bidder.setPassword("guna@123");
 		bidder.setPincode("234523");
-		bidder.setState("Maharastra");
+		bidder.setState("Tamil Nadu");
 		bidder.setApproval("YES");
 		bidder.setSales(null);
 		dao.addOrUpfateBidder(bidder);

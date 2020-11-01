@@ -4,23 +4,23 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Repository;
 
 import com.lti.agro.model.Bidder;
 import com.lti.agro.model.Farmer;
 
+@Repository
 public class SignInDao {
-	EntityManagerFactory emf;
+	
+	@PersistenceContext
 	EntityManager em;
-	EntityTransaction tx;
-	
 
-	public SignInDao() {
-		emf = Persistence.createEntityManagerFactory("pu");
-		em = emf.createEntityManager();
-		tx = em.getTransaction();
-	}
 	
+	@Transactional
 	public boolean signIn(String email,String password,String userType){
 		
 		if(userType=="Admin"){// here we will add login credentails of admin

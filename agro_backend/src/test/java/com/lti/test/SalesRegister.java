@@ -22,7 +22,7 @@ public class SalesRegister {
 	@Test
 	public void sales() {
 		FarmerDaoImpl dao1 = context.getBean(FarmerDaoImpl.class);
-		Farmer farmer=dao1.findFarmerByAadharNo("123456789012");
+		//Farmer farmer=dao1.findFarmerByAadharNo("123456789012");
 		Sales sale = new Sales();
 		sale.setBasePrice(500d);
 		sale.setBidder(null);
@@ -30,7 +30,7 @@ public class SalesRegister {
 		sale.setCropName("Wheat");	
 		sale.setCropType("Khariff");
 		sale.setDate(LocalDate.of(2020, 10, 10));
-		sale.setFarmer(farmer);
+		sale.setFarmer(null);
 		sale.setFertilizer("ABC");
 		sale.setQuantity(40);
 		sale.setSoilPhCertificate(false);
@@ -39,7 +39,7 @@ public class SalesRegister {
 		sale.setSalesId(3007);
 		List<Sales> sales =new ArrayList<Sales>();
 		sales.add(sale);
-		farmer.setSales(sales);
+		//farmer.setSales(sales);
 		dao.placeASellRequest(sale);
 	}
 
