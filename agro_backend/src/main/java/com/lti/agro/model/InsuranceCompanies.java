@@ -11,8 +11,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "agro_insurancecompany")
 public class InsuranceCompanies {
 	
 	@Id
@@ -73,6 +75,12 @@ public class InsuranceCompanies {
 	}
 	public void setState(String state) {
 		this.state = state;
+	}
+	@Override
+	public String toString() {
+		return "InsuranceCompanies [companyId=" + companyId + ", insuranceapplications=" + insuranceapplications
+				+ ", companyName=" + companyName + ", sumAssuredPrHectare=" + sumAssuredPrHectare + ", interest="
+				+ interest + ", cropType=" + cropType + ", state=" + state + "]";
 	}
 	
 	

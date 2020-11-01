@@ -10,8 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "agro_insuranceclaim")
 public class InsuranceClaim {
 	
 	@Id
@@ -86,6 +88,13 @@ public class InsuranceClaim {
 
 	public void setAmountClaimed(double amountClaimed) {
 		this.amountClaimed = amountClaimed;
+	}
+
+	@Override
+	public String toString() {
+		return "InsuranceClaim [rId=" + rId + ", insuranceapplication=" + insuranceapplication + ", causeOfClaim="
+				+ causeOfClaim + ", dateOfLoss=" + dateOfLoss + ", dateOfClaim=" + dateOfClaim + ", dateOfApproval="
+				+ dateOfApproval + ", amountClaimed=" + amountClaimed + "]";
 	}
 	
 	
