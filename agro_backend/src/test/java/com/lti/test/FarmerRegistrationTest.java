@@ -17,21 +17,21 @@ public class FarmerRegistrationTest {
 	@Test
 	public void registerAFarmer() {
 		Farmer farmer=new Farmer();
-		farmer.setName("Sagar");
-		farmer.setEmail("sagar@lti.com");
-		farmer.setAadhaarCardNumber("123456789012");
+		farmer.setName("Nitesh");
+		farmer.setEmail("nitesh@lti.com");
+		farmer.setAadhaarCardNumber("333456789012");
 		farmer.setAddress("421 road");
 		farmer.setArea(50);
 		farmer.setCity("mohali");
 		farmer.setBankAccount("1234567890");
-		farmer.setBankName("HDFC");
-		farmer.setCertificateNumber("Hagb9271");
+		farmer.setBankName("HSBC");
+		farmer.setCertificateNumber("Hacb9271");
 		farmer.setIfscCode("UTB1731000");
-		farmer.setPhoneNo("98234234552");
+		farmer.setPhoneNo("98234664552");
 		farmer.setPanCardNumber("JJKS3419223");
-		farmer.setPassword("SAGAR@123");
-		farmer.setLandAddress("balisahi , kaithakhola , chandigarh");
-		farmer.setLandstate("punjab");
+		farmer.setPassword("nitesh@123");
+		farmer.setLandAddress("balisahi , kaithakhola , lonavla");
+		farmer.setLandstate("maharasta");
 		farmer.setLandPincode(756171);
 		farmer.setApproval("NO");
 		farmer.setInsuranceapplication(null);		

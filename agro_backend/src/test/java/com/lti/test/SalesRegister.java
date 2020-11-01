@@ -28,10 +28,10 @@ public class SalesRegister {
 		sale.setBidder(null);
 		sale.setBiddingAmount(800d);
 		sale.setCropName("Wheat");	
-		sale.setCropType("Khariff");
-		sale.setDate(LocalDate.of(2020, 10, 10));
+		sale.setCropType("Rabi");
+		sale.setDate(LocalDate.of(2018, 10, 10));
 		sale.setFarmer(null);
-		sale.setFertilizer("ABC");
+		sale.setFertilizer("DDD");
 		sale.setQuantity(40);
 		sale.setSoilPhCertificate(false);
 		sale.setSold(false);

@@ -23,9 +23,18 @@ public class InsuranceApplications {
 	String cropType;
 	int cultivationArea;
 	int year;
+	public String getAadhaarCardNumber() {
+		return aadhaarCardNumber;
+	}
+
+	public void setAadhaarCardNumber(String aadhaarCardNumber) {
+		this.aadhaarCardNumber = aadhaarCardNumber;
+	}
+
 	double sumAssured;
 	double farmersPrimium;
 	double govtsPrimium;
+	String aadhaarCardNumber;
 	@Id
 	@SequenceGenerator(name="insappSeq", initialValue=9001, allocationSize=1)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="insappSeq")

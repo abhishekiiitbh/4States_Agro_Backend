@@ -32,6 +32,16 @@ public class InsuranceClaim {
 	LocalDate dateOfClaim;
 	LocalDate dateOfApproval;
 	
+	boolean claimStatus;
+	
+	public boolean isClaimStatus() {
+		return claimStatus;
+	}
+
+	public void setClaimStatus(boolean claimStatus) {
+		this.claimStatus = claimStatus;
+	}
+
 	double amountClaimed;
 
 	public int getrId() {

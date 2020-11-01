@@ -23,8 +23,9 @@ public class InsuranceApplicationTest {
 		InsuranceApplicationController controller = context.getBean(InsuranceApplicationController.class);
 		FarmerDaoImpl dao=context.getBean(FarmerDaoImpl.class);
 		InsuranceApplications application = new InsuranceApplications();
-		Farmer farmer = dao.findFarmerById(1005);
+		Farmer farmer = dao.findFarmerById(1002);
 		application.setAddress("184 6th cross Herohalli 560091");
+		application.setAadhaarCardNumber("434352563286797");
 		application.setCropName("Wheat");
 		application.setCropType("Khariff");
 		application.setFarmer(farmer);

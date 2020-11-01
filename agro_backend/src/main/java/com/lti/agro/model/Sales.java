@@ -31,6 +31,8 @@ public class Sales {
 	double biddingAmount;
 	LocalDate saledate;
 	
+	boolean saleStatus;
+	
 	@ManyToOne
 	@JoinColumn(name="fId")
 	Farmer farmer;
